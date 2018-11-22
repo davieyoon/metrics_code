@@ -1,0 +1,25 @@
+group18to35 = []; % paste in all membership durations 
+group36to55 = []; % paste in all membership durations 
+group56above = []; % paste in all membership durations 
+
+load('group18to35.mat'); 
+load('group36to55.mat'); 
+load('group56above.mat'); 
+
+f18 = figure; set(f18, 'Color', 'w');
+set(gca, 'Color', 'w', 'FontSize', 24); hold on
+histogram(group18to35,'BinEdges',0:50:2500, 'FaceColor','r'); % cuts off bins at 2500 for display purposes
+xlabel('Membership duration (days)')
+ylabel('Number of members')
+title('Young adults (18-35, N=206)'); 
+pth = fileparts(which(mfilename));
+hgexport(fH, fullfile(pth, 'figures', 'agexcontact_18to35.eps'));
+saveas(fH, fullfile(pth, 'figures', 'agexcontact_18to35.png'));
+
+title('Adults (36-55, N=250)'); 
+title('Seniors (56+, N=199)'); 
+
+f36 = histogram(group36to55,'BinEdges',0:50:2500, 'FaceColor','b'); % cuts off bins at 2500 for display purposes
+
+
+f56 = histogram(group36to55,'BinEdges',0:50:2500, 'FaceColor',[0.5 0.5 0.5]); % cuts off bins at 2500 for display purposes 
