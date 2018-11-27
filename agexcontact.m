@@ -31,7 +31,7 @@ saveas(f36, fullfile(pth, 'figures', 'agexcontact_36to55.png'));
 %% Figure seniors 
 f36 = figure; set(f36, 'Color', 'w');
 set(gca, 'Color', 'w', 'FontSize', 24); hold on
-histogram(group36to55,'BinEdges',0:50:2500, 'FaceColor',[0.5 0.5 0.5]); % cuts off bins at 2500 for display purposes 
+histogram(group56above,'BinEdges',0:50:2500, 'FaceColor',[0.5 0.5 0.5]); % cuts off bins at 2500 for display purposes 
 xlabel('Membership duration (days)')
 ylabel('Number of members')
 title('Seniors (56+, N=199)'); 
